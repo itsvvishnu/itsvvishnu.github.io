@@ -1,0 +1,51 @@
+/* NAVBAR */
+nav {
+  font-family: "PT Sans Caption", sans-serif;
+  height: 60px;
+  border-bottom: 1px solid #eeeeee33;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+nav a {
+  text-decoration: none;
+  color: #333333;
+  padding: 10px;
+}
+nav a:hover {
+  color: #2fb2ff;
+}
+nav a + a {
+  margin-left: 20px;
+}
+.resume {
+  transition: all ease-in-out 0.5s;
+  border: 2px solid #2fb2ff;
+  color: #2fb2ff;
+  padding: 10px 20px;
+  border-radius: 4px;
+  animation-delay: 0.2s;
+}
+.resume:hover {
+  background-color: #2fb2ff14;
+}
+.half {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+.end {
+  justify-content: flex-end;
+}
+
+/*GENERAL*/
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/*SECTIONS*/
+section.intro {
+  min-height: calc(100% - 50px);
+  display: flex;
+}
