@@ -13,6 +13,16 @@ nav {
   top: 0;
   z-index: 22;
   border-bottom: 1px solid #eeeeee33;
+  padding: 10px 20px;
+  filter: blur(5);
+}
+.sticky nav {
+  filter: blur(0);
+}
+section#navbar {
+  transition: color ease-in-out 0.5s;
+  z-index: 9;
+  background-blend-mode: multiply;
 }
 nav a {
   color: #333333;
@@ -84,9 +94,7 @@ nav a + a {
 .static-social ul li:nth-child(3):hover svg {
   fill: #f59b4f;
 }
-section#navbar {
-  transition: color ease-in-out 0.5s;
-}
+
 /*GENERAL*/
 body {
   margin: 0;
@@ -187,8 +195,122 @@ section.about p {
   line-height: 30px;
   color: #333;
 }
+/* EXPERIENCE */
+section.experience .work-place {
+  display: flex;
+}
+section.experience .work-place ul.companies {
+  display: flex;
+  flex-flow: column;
+  list-style: none;
+  padding: 0;
+  margin: 40px 0 0 0;
+  border: 1px solid #24292e11;
+  position: relative;
+  max-height: max-content;
+  height: max-content;
+}
+section.experience .work-place ul.companies::before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 100%;
+  background-color: #091d2922;
+  left: 0px;
+  position: absolute;
+}
+.company span {
+  white-space: nowrap;
+}
+.details {
+  margin: 40px 0 0 0;
+  padding: 0 40px;
+}
+.details h2 {
+  margin: 10px 0;
+}
+.details a {
+  color: #0177b5;
+}
+.details span {
+  font-family: "PT Sans Caption", sans-serif;
+  color: #333333;
+}
+.details ul {
+  list-style: none;
+  padding: 0;
+}
+.details ul li {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 20px;
+  font-weight: 600;
+  color: #091d29;
+  line-height: 30px;
+}
+.details ul li svg {
+  height: 14px;
+  fill: #0177b5;
+  margin-bottom: -1px;
+  margin-right: 10px;
+}
 
+section.experience .work-place ul.companies li {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  padding: 15px 10px;
+  position: relative;
+}
+section.experience .work-place ul.companies li + li {
+  border-top: 1px solid #24292e11;
+}
+section.experience .work-place ul.companies li a {
+  display: flex;
+  align-items: center;
+}
+section.experience .work-place ul.companies li.active::before {
+  background-color: #1e73af;
+  content: "";
+  display: block;
+  width: 2px;
+  height: 100%;
+  left: 0;
+  position: absolute;
+}
+section.experience .work-place ul.companies li:hover {
+  background-color: #1e73af44;
+}
+section.experience .work-place ul.companies li img {
+  height: 30px;
+}
+section.experience .work-place ul.companies li span {
+  font-family: "PT Sans Caption", sans-serif;
+  margin-left: 30px;
+  color: #091d29;
+}
+section.experience .work-place ul.companies li.active span {
+  color: #1e73af;
+}
+.details .overlay-outer .item {
+  transition: all ease-in-out 0.5s;
+  opacity: 0;
+  display: none;
+}
+.details .overlay-outer .item.show {
+  display: block;
+  animation: animateOpacity 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
 /* CONTACT */
 section.contact {
   padding-bottom: 100px;
+}
+
+@keyframes animateOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
