@@ -7,47 +7,58 @@ nav {
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  padding: 10px;
 }
 .sticky {
   position: fixed;
   top: 0;
   z-index: 22;
-  border-bottom: 1px solid #eeeeee33;
-  padding: 10px 20px;
   filter: blur(5);
+  padding: 0;
 }
 .sticky nav {
   filter: blur(0);
+  background-color: transparent;
+}
+.sticky.navbar{
+  padding: 0 20px;
+}
+.navbar{
+  padding: 10px 20px;
 }
 section#navbar {
   transition: color ease-in-out 0.5s;
   z-index: 9;
   background-blend-mode: multiply;
+  background: linear-gradient(120deg, rgb(93, 79, 255) 0%, rgb(96, 114, 255) 100%);
 }
 nav a {
-  color: #333333;
+  color: rgb(192, 188, 188);
   padding: 10px;
   transition: all ease-in-out 0.5s;
 }
 nav a:hover {
-  color: #1e73af;
+  color: #fff;
 }
 nav a.active {
-  color: #1e73af;
+  color: #fff;
 }
 nav a + a {
   margin-left: 20px;
 }
 .resume {
   transition: all ease-in-out 0.5s;
-  border: 2px solid #1e73af;
-  color: #1e73af;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
   padding: 10px 20px;
   border-radius: 4px;
   animation-delay: 0.2s;
 }
 .resume:hover {
-  background-color: #1e73af22;
+  background-color: #dee2ff;
+  color:#5d4fff ;
 }
 .half {
   width: 50%;
@@ -76,23 +87,17 @@ nav a + a {
   width: 1px;
   display: block;
   margin: 20px auto 0 auto;
-  background-color: #091d2947;
+  background-color: #8a8fff;
 }
 .static-social ul li {
   width: 20px;
   display: block;
 }
 .static-social ul li svg {
-  fill: #726d6d;
+  fill: #c0c7ff;
 }
-.static-social ul li:first-child:hover svg {
-  fill: #24292e;
-}
-.static-social ul li:nth-child(2):hover svg {
-  fill: #0177b5;
-}
-.static-social ul li:nth-child(3):hover svg {
-  fill: #f59b4f;
+.static-social ul li:hover svg {
+  fill: #fff;
 }
 
 /*GENERAL*/
@@ -102,6 +107,11 @@ body {
   font-family: "Montserrat", " PT Sans Caption ", "sans-serif";
   max-width: 100vw;
   overflow-x: hidden;
+  background: linear-gradient(120deg, rgb(93, 79, 255) 0%, rgb(96, 114, 255) 100%);
+
+}
+body.eject{
+  background: #f8fafd;
 }
 body * {
   box-sizing: border-box;
@@ -110,7 +120,6 @@ a {
   text-decoration: none;
 }
 section {
-  padding: 20px;
   width: 100%;
 }
 section p {
@@ -119,24 +128,25 @@ section p {
 /*INTRO*/
 
 section.intro {
-  min-height: calc(100vh - 220px);
+  min-height: 100vh;
   display: flex;
   flex-flow: column;
   padding: 50px 160px;
   margin-bottom: 100px;
+  background: linear-gradient(120deg, rgb(93, 79, 255) 0%, rgb(96, 114, 255) 100%);
 }
 section.intro > span {
   font-size: 56px;
   margin-top: 60px;
   font-weight: 600;
   font-family: "Montserrat";
-  color: #091d29;
+  color: #fff;
   margin: 0;
   margin: 25px 0 0 0;
   letter-spacing: 4px;
 }
 section.intro > span.name {
-  color: #1e73af;
+  color: #b7b2ff;
   font-family: "PT Sans Caption", sans-serif;
   font-size: 18px;
   margin: 0;
@@ -145,7 +155,7 @@ section.intro > span.name {
 section.intro > h2 {
   font-size: 56px;
   margin: 25px 0 0 0;
-  color: #091d29;
+  color: #f8fafd;
   opacity: 0.95;
   letter-spacing: 4px;
 }
@@ -154,27 +164,32 @@ section.intro > p {
   line-height: 30px;
   font-size: 18px;
   margin: 25px 0 0 0;
-  color: #5e6467;
+  color: #c4cbff;
 }
 a.get-in-touch {
-  border: 2px solid #1e73af;
-  color: #1e73af;
+  color: #f8fafd;
+  background-color: #8f87fd;
+  font-size: 22px;
+  font-weight: 500;
   display: block;
   margin-top: 25px;
   max-width: max-content;
-  padding: 20px 40px;
+  padding: 15px 30px;
   font-family: "PT Sans Caption", sans-serif;
   border-radius: 4px;
   transition: all ease-in-out 0.5s;
+  box-shadow: 0 0 20px 4px #747afd;
 }
 a.get-in-touch:hover {
-  background-color: #1e73af22;
+  background-color: #dee2ff;
+  color:#5d4fff ;
 }
 
 /* ABOUT */
 
 section.about {
   padding: 50px 160px;
+  background-color: #f8fafd;
 }
 section.about h3 {
   font-size: 30px;
@@ -196,6 +211,10 @@ section.about p {
   color: #333;
 }
 /* EXPERIENCE */
+section.experience{
+  background-color: #f8fafd;
+
+}
 section.experience .work-place {
   display: flex;
 }

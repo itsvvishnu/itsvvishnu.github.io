@@ -9,6 +9,7 @@ window.addEventListener("scroll", (event) => {
   console.log(experience.getBoundingClientRect().top);
   if (scroll > 400) {
     document.getElementById("navbar").classList.add("sticky");
+    document.getElementById("body").classList.add("eject");
   } else {
     document.getElementById("navbar").classList.remove("sticky");
   }
