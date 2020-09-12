@@ -179,8 +179,8 @@ section.intro > p {
   color: #c4cbff;
 }
 a.get-in-touch {
-  color: #f8fafd;
-  background-color: #8f87fd;
+  background-color: #dee2ff;
+  color:#5d4fff ;
   font-size: 22px;
   font-weight: 500;
   display: block;
@@ -192,8 +192,9 @@ a.get-in-touch {
   transition: all ease-in-out 0.5s;
 }
 a.get-in-touch:hover {
-  background-color: #dee2ff;
-  color:#5d4fff ;
+
+  color: #f8fafd;
+  background-color: #8f87fd;
 }
 
 /* ABOUT */
