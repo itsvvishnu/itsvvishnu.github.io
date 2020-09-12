@@ -171,9 +171,9 @@ section.intro > p {
   color: #c4cbff;
 }
 a.get-in-touch {
-  background-color: #dee2ff;
-  color:#5d4fff ;
-  font-size: 22px;
+  border:2px solid #dee2ff;
+  color:#fff ;
+  font-size: 20px;
   font-weight: 500;
   display: block;
   margin-top: 25px;
@@ -184,15 +184,13 @@ a.get-in-touch {
   transition: all ease-in-out 0.5s;
 }
 a.get-in-touch:hover {
-
-  color: #f8fafd;
-  background-color: #8f87fd;
+  background-color: #ffffff30;
 }
 
 /* ABOUT */
 
 section.about {
-  padding: 50px 160px;
+  padding: 50px 20px 50px 160px;
   background-color: #f8fafd;
 }
 section.about h3 {
@@ -271,7 +269,7 @@ section.experience .work-place ul.companies::before {
   margin-top: 20px;
   position: relative;
   padding-right: 20px;
-  font-family: "Montserrat", sans-serif;
+  font-family: "PT Sans Caption", sans-serif;
   font-weight: 500;
   color: #091d29;
   line-height: 30px;
@@ -346,9 +344,11 @@ section.work .projects .half img{
 section.work .projects .half {
   flex-direction: column;
   align-items: flex-start;
+  width: auto;
 }
 section.work .projects .half + .half{
   justify-content: center;
+  margin-left: 150px;
 }
 section.work .projects .item h4{
   font-family: "Montserrat", sans-serif;
@@ -379,6 +379,21 @@ section.work .projects .item .pr-action{
 /* CONTACT */
 section.contact {
   padding-bottom: 100px;
+}
+.contact-lg{
+  margin-top: 25px;
+  display: block;
+  width: max-content;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-family: "PT Sans Caption", sans-serif;
+  color: #8f87fd;
+  border: 2px solid #8f87fd;
+  font-size: 20px;
+  transition: background-color ease-in-out 0.5s;
+}
+.contact-lg:hover{
+  background-color: #6576fc0f;
 }
 
 @keyframes animateOpacity {
