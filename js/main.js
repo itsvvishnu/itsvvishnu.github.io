@@ -10,8 +10,10 @@ window.addEventListener("scroll", (event) => {
   if (scroll > 400) {
     document.getElementById("navbar").classList.add("sticky");
     document.getElementById("body").classList.add("eject");
+    document.getElementById("social").classList.add("toggle");
   } else {
     document.getElementById("navbar").classList.remove("sticky");
+    document.getElementById("social").classList.remove("toggle");
   }
   if (-100 < about.getBoundingClientRect().top < 100) {
     Array.from(navbarItems).map((item) => {

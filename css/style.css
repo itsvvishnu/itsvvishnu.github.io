@@ -87,11 +87,15 @@ nav a + a {
   width: 1px;
   display: block;
   margin: 20px auto 0 auto;
-  background-color: #8a8fff;
+  background-color: #c0c7ff;
+  background-blend-mode: lighten;
 }
 .static-social ul li {
   width: 20px;
   display: block;
+}
+.static-social ul.toggle li svg:hover{
+  fill: #031d3c;
 }
 .static-social ul li svg {
   fill: #c0c7ff;
@@ -99,7 +103,15 @@ nav a + a {
 .static-social ul li:hover svg {
   fill: #fff;
 }
-
+.logo{
+  display: flex;
+  justify-content: flex-start;
+}
+.logo svg{
+  height: 30px;
+  stroke-width: 10px;
+  fill: #fff;
+}
 /*GENERAL*/
 body {
   margin: 0;
@@ -178,7 +190,6 @@ a.get-in-touch {
   font-family: "PT Sans Caption", sans-serif;
   border-radius: 4px;
   transition: all ease-in-out 0.5s;
-  box-shadow: 0 0 20px 4px #747afd;
 }
 a.get-in-touch:hover {
   background-color: #dee2ff;
@@ -193,6 +204,7 @@ section.about {
 }
 section.about h3 {
   font-size: 30px;
+  color: #031d3c;
 }
 section.about h3::after {
   content: "";
@@ -253,7 +265,7 @@ section.experience .work-place ul.companies::before {
 }
 .details span {
   font-family: "PT Sans Caption", sans-serif;
-  color: #333333;
+  color: #757575;
 }
 .details ul {
   list-style: none;
