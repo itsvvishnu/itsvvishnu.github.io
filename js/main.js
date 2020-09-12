@@ -6,7 +6,7 @@ let navbarItems = document.getElementById("navbar").getElementsByTagName("a");
 
 window.addEventListener("scroll", (event) => {
   var scroll = this.scrollY;
-  console.log(experience.getBoundingClientRect().top);
+  // console.log(experience.getBoundingClientRect().top);
   if (scroll > 400) {
     document.getElementById("navbar").classList.add("sticky");
     document.getElementById("body").classList.add("eject");
@@ -69,8 +69,9 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 
 // The function actually applying the offset
 function offsetAnchor() {
+  console.log("call");
   if (location.hash.length !== 0) {
-    window.scrollTo(window.scrollX, window.scrollY - 80);
+    window.scrollTo(window.scrollX, window.scrollY - 200);
   }
 }
 
