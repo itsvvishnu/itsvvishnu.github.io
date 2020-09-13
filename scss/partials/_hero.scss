@@ -19,6 +19,7 @@ section.hero{
       z-index: 9;
       background-blend-mode: multiply;
       background: linear-gradient(120deg, rgb(93, 79, 255) 0%, rgb(96, 114, 255) 100%);
+      box-shadow: 0 0 4px #00000085;
     }
     nav{
       height: 60px;

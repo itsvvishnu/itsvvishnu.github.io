@@ -400,6 +400,8 @@ section.hero .navbar.sticky {
   z-index: 9;
   background-blend-mode: multiply;
   background: linear-gradient(120deg, #5d4fff 0%, #6072ff 100%);
+  -webkit-box-shadow: 0 0 4px #00000085;
+          box-shadow: 0 0 4px #00000085;
 }
 
 section.hero .navbar nav {
