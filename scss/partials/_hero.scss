@@ -1,0 +1,82 @@
+section.hero{
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  background: linear-gradient(120deg, rgba(94, 79, 255, 0.925) 0%, rgba(96, 114, 255, 0.8) 100%),url("../assets/bg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .navbar{
+    padding: 20px 0;
+    &.sticky{
+      position: fixed;
+      top: 0;
+      padding: 0;
+      left: 0;
+      width: 100%;
+      transition: color ease-in-out 0.5s;
+      z-index: 9;
+      background-blend-mode: multiply;
+      background: linear-gradient(120deg, rgb(93, 79, 255) 0%, rgb(96, 114, 255) 100%);
+    }
+    nav{
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      a {
+        color: $light-primary;
+        padding: 10px;
+        transition: all ease-in-out 0.5s;
+        font-size: 1.1em;
+        &:hover,&.active{
+          color: $white;
+        }
+        &+a{
+          margin-left: 20px;
+        }
+      }
+      .logo{
+        a{
+          padding: 0;
+          svg{
+            height: 30px;
+            stroke-width: 10px;
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+  .intro{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    flex: 1;
+    span {
+      font-size: 56px;
+      margin-top: 60px;
+      font-weight: 600;
+      font-family: "Montserrat";
+      color: $white;
+      margin: 0;
+      margin: 25px 0 0 0;
+      letter-spacing: 4px;
+    }
+    h2 {
+      font-size: 56px;
+      margin: 25px 0 0 0;
+      color: #f8fafd;
+      opacity: 0.95;
+      letter-spacing: 4px;
+    }
+    p{
+      max-width: 700px;
+      line-height: 30px;
+      font-size: 18px;
+      margin: 25px 0 0 0;
+      color: #c4cbff;
+    }
+  }
+}

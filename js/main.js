@@ -2,87 +2,43 @@ let about = document.getElementById("about");
 let experience = document.getElementById("experience");
 let work = document.getElementById("work");
 let contact = document.getElementById("contact");
-let navbarItems = document.getElementById("navbar").getElementsByTagName("a");
+let navbarItems = document.querySelectorAll("#navbar a.nav-item");
+let scrollOffSet = 50;
 
 window.addEventListener("scroll", (event) => {
   var scroll = this.scrollY;
-  // console.log(experience.getBoundingClientRect().top);
-  if (scroll > 400) {
+  if (scroll >= screen.height - 250) {
     document.getElementById("navbar").classList.add("sticky");
-    document.getElementById("body").classList.add("eject");
-    document.getElementById("social").classList.add("toggle");
-  } else {
+    document.getElementById("navbar").querySelector("nav").classList.add("container");
+  } 
+  else {
     document.getElementById("navbar").classList.remove("sticky");
-    document.getElementById("social").classList.remove("toggle");
   }
-  if (-100 < about.getBoundingClientRect().top < 100) {
-    Array.from(navbarItems).map((item) => {
-      if (item.hash == "#about") {
-        item.classList.add("active");
-      } else {
-        item.classList.remove("active");
-      }
-    });
-  } else if (-100 < experience.getBoundingClientRect().top < 100) {
-    Array.from(navbarItems).map((item) => {
-      if (item.hash == "#experience") {
-        item.classList.add("active");
-      } else {
-        item.classList.remove("active");
-      }
-    });
-  } else if (
-    scroll >= work.getClientRects().top - 300 &&
-    scroll < contact.getClientRects().top
-  ) {
-    Array.from(navbarItems).map((item) => {
-      if (item.hash == "#work") {
-        item.classList.add("active");
-      } else {
-        item.classList.remove("active");
-      }
-    });
-  } else if (scroll >= contact.getClientRects().top) {
-    Array.from(navbarItems).map((item) => {
-      if (item.hash == "#contact") {
-        item.classList.add("active");
-      } else {
-        item.classList.remove("active");
-      }
-    });
-  } else {
-    Array.from(navbarItems).map((item) => {
-      item.classList.remove("active");
-    });
-  }
-});
-AOS.init();
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-  anchor.addEventListener("click", function (e) {
-    e.preventDefault();
-
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
-      behavior: "smooth",
-    });
-  });
+  Array.from(navbarItems).map(link =>{
+    console.log(link)
+    let section = document.querySelector(link.hash);
+    if (
+      section.offsetTop <= scroll &&
+      section.offsetTop + section.offsetHeight > scroll
+    ) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  })
 });
 
-// The function actually applying the offset
-function offsetAnchor() {
-  console.log("call");
-  if (location.hash.length !== 0) {
-    window.scrollTo(window.scrollX, window.scrollY - 200);
-  }
-}
+//ANIMATION INIT
 
-// // This will capture hash changes while on the page
-window.addEventListener("hashchange", offsetAnchor);
+AOS.init({
+  offset: 200,
+  duration: 800,
+  easing: "ease-in",
+  delay: 100,
+});
 
-// // This is here so that when you enter the page with a hash,
-// // it can provide the offset in that case too. Having a timeout
-// // seems necessary to allow the browser to jump to the anchor first.
-window.setTimeout(offsetAnchor, 1);
-// The delay of 1 is arbitrary and may not always work right (although it did in my testing).
+//TIMELINE
+
 document.getElementById("workPlace").addEventListener("click", function (e) {
   e.preventDefault();
   if (e.target && e.target.matches("li *")) {
@@ -99,5 +55,21 @@ document.getElementById("workPlace").addEventListener("click", function (e) {
       let wkTarget = that.getAttribute("data-com");
       document.getElementById(wkTarget).classList.add("show");
     }
+  }
+});
+
+//SCROLL
+document.getElementById("navItems").addEventListener("click", (e) => {
+  if (e.target && e.target.matches("a.nav-item")) {
+    let navLinks = document.getElementById("navItems").children;
+    Array.from(navLinks).map((nav) => {
+      nav.classList.remove("active");
+    });
+    e.target.classList.add("active");
+    let hash = e.target.hash;
+    console.log(hash);
+    document
+      .querySelector(hash)
+      .scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
   }
 });

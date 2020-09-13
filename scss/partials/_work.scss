@@ -1,0 +1,46 @@
+section.work{
+  .projects{
+    margin-top: 50px;
+    .item{
+      display: flex;
+      h4{
+        font-size: 30px;
+        color: $dark;
+        margin: 15px 0 10px 0;
+      }
+      .tech{
+        display: flex;
+        span{
+          color: $primary;
+          font-family: "PT Sans Caption", sans-serif;
+          border-radius: 34px;
+          padding: 5px 10px;
+          background-color: #0000000a;
+          +span{
+            margin-left: 10px;
+          }
+        }
+      }
+      .pr-action{
+        background-color: $primary;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-family: "PT Sans Caption", sans-serif;
+        color: #fff;
+        margin-top: 40px;
+      }
+    }
+    .half{
+      flex-direction: column;
+      align-items: flex-start;
+      width: auto;
+      img{
+        width: 200px;
+      }
+      +.half{
+        justify-content: center;
+        margin-left: 150px;
+      }
+    }
+  }
+}

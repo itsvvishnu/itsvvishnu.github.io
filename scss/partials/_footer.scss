@@ -1,0 +1,57 @@
+footer{
+  &.sep{
+    padding:60px 0;
+  }
+  .static-social{
+    display: flex;
+    flex-direction: column;
+    ul{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      li{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+          display: flex;
+          align-items: center;
+          span{
+            color: $gray;
+            transition: color ease-in-out 0.5s;
+          }
+          svg{
+            fill: $gray;
+            width: 20px;
+            margin-right: 20px;
+            transition: fill ease-in-out 0.5s;
+          }
+          + a{
+            margin-left: 20px;
+          }
+          &:hover{
+            span{
+              color: $dark;
+            }
+            svg{
+              fill: $dark;
+            }
+          }
+        }
+        +li{
+          margin-left: 60px;
+        }
+      }
+    }
+    .copy{
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      span{
+        text-align: center;
+        color: $gray;
+      }
+    }
+  }
+}
