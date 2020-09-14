@@ -3,6 +3,9 @@ let scrollOffSet = 50;
 
 window.addEventListener("scroll", (event) => {
   var scroll = this.scrollY;
+  if(document.getElementById("about").offsetTop <= scroll){
+    document.getElementById("skills").classList.add("bar-animate");
+  }
   if (scroll >= screen.height - 250) {
     document.getElementById("navbar").classList.add("sticky");
     document.getElementById("navbar").querySelector("nav").classList.add("container");
@@ -13,14 +16,18 @@ window.addEventListener("scroll", (event) => {
   }
   Array.from(navbarItems).map(link =>{
     let section = document.querySelector(link.hash);
-    if (
-      section.offsetTop <= scroll &&
-      section.offsetTop + section.offsetHeight > scroll
-    ) {
-      link.classList.add("active");
-    } else {
-      link.classList.remove("active");
+  if(!(document.documentElement.scrollTop + window.innerHeight == document.documentElement.scrollHeight))
+    {
+      if (
+        section.offsetTop <= scroll &&
+        section.offsetTop + section.offsetHeight > scroll
+      ) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
     }
+
   })
 });
 
@@ -66,5 +73,17 @@ document.getElementById("navItems").addEventListener("click", (e) => {
     document
       .querySelector(hash)
       .scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });
+  }
+});
+
+document.addEventListener('scroll', function (event) {
+  if(document.documentElement.scrollTop + window.innerHeight == document.documentElement.scrollHeight)
+  {
+    Array.from(navbarItems).map(nav =>{
+      nav.classList.remove("active");
+      if(nav.hash == "#contact"){
+        nav.classList.add("active");
+      }
+    })
   }
 });

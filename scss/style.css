@@ -110,8 +110,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bar-animate .animate-item {
-  -webkit-animation: animateWidth 2s 2s;
-          animation: animateWidth 2s 2s;
+  -webkit-animation: animateWidth 2s 1s;
+          animation: animateWidth 2s 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: cubic-bezier(0.09, 0.8, 0.24, 0.77);
@@ -189,7 +189,7 @@ section.about .skill-inner {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 20px 0 0 0;
-  color: #091d29;
+  color: #292929;
 }
 
 section.about .skill-inner .skill-item {
@@ -562,7 +562,7 @@ section.hero .intro p {
 }
 
 footer.sep {
-  padding: 100px 0;
+  padding: 40px 0;
 }
 
 footer .static-social {
@@ -628,11 +628,11 @@ footer .static-social ul li a + a {
 }
 
 footer .static-social ul li a:hover span {
-  color: #091d29;
+  color: #5d4fff;
 }
 
 footer .static-social ul li a:hover svg {
-  fill: #091d29;
+  fill: #5d4fff;
 }
 
 footer .static-social ul li + li {

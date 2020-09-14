@@ -1,6 +1,6 @@
 footer{
   &.sep{
-    padding:100px 0;
+    padding:40px 0;
   }
   .static-social{
     display: flex;
@@ -32,10 +32,10 @@ footer{
           }
           &:hover{
             span{
-              color: $dark;
+              color: $primary;
             }
             svg{
-              fill: $dark;
+              fill: $primary;
             }
           }
         }

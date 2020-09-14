@@ -85,7 +85,7 @@ h1,h2,h3,h4,h5,h6{
 }
 .bar-animate{
   .animate-item{
-    animation: animateWidth 2s 2s;
+    animation: animateWidth 2s 1s;
     animation-fill-mode: forwards;
     animation-timing-function: cubic-bezier(0.09, 0.8, 0.24, 0.77);
   }
