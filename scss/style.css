@@ -145,20 +145,8 @@ a.get-in-touch {
 }
 
 a.get-in-touch:hover {
-  background-color: #ffffff30;
-}
-
-.btn-contact {
-  display: block;
-  padding: 15px 30px;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-top: 40px;
-  font-size: 20px;
-  color: #f8fafd;
-  border-radius: 5px;
   background-color: #5d4fff;
+  color: #f8fafd;
 }
 
 section.work .projects {
@@ -423,6 +411,8 @@ section.hero .navbar.sticky .logo svg {
 
 section.hero .navbar.sticky a {
   color: #cecee2;
+  -webkit-transition: color ease-in 0s;
+  transition: color ease-in 0s;
 }
 
 section.hero .navbar.sticky a:hover, section.hero .navbar.sticky a.active {
@@ -445,8 +435,8 @@ section.hero .navbar nav {
 section.hero .navbar nav a {
   color: #292929;
   padding: 10px 0;
-  -webkit-transition: all ease-in-out 0.5s;
-  transition: all ease-in-out 0.5s;
+  -webkit-transition: color ease-in-out 0.5s;
+  transition: color ease-in-out 0.5s;
   font-size: 1em;
 }
 

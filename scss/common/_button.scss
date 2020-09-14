@@ -12,15 +12,7 @@ a.get-in-touch {
   transition: all ease-in-out 0.5s;
 }
 a.get-in-touch:hover {
-  background-color: #ffffff30;
-}
-.btn-contact{
-  display: block;
-  padding: 15px 30px;
-  width: fit-content;
-  margin-top: 40px;
-  font-size: 20px;
-  color: $light;
-  border-radius: 5px;
   background-color: $primary;
+  color: $light;
 }
+
