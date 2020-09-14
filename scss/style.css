@@ -128,8 +128,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a.get-in-touch {
-  border: 2px solid #5d4fff;
-  color: #5d4fff;
+  border: 2px solid #6072ff;
+  color: #6072ff;
   font-size: 20px;
   font-weight: 500;
   display: block;
@@ -145,7 +145,7 @@ a.get-in-touch {
 }
 
 a.get-in-touch:hover {
-  background-color: #5d4fff;
+  background-color: #6072ff;
   color: #f8fafd;
 }
 
@@ -502,7 +502,7 @@ section.hero .intro p {
   line-height: 30px;
   font-size: 18px;
   margin: 25px 0 0 0;
-  color: #292929;
+  color: #757575;
 }
 
 footer.sep {
