@@ -68,7 +68,6 @@ section.hero{
           svg{
             height: 30px;
             stroke-width: 10px;
-            fill: $white;
             fill: $primary;
           }
         }
@@ -82,16 +81,6 @@ section.hero{
     flex: 1;
     padding-top:100px;
     position: relative;
-    span {
-      font-size: 28px;
-      margin-top: 60px;
-      font-weight: 600;
-      font-family: "Montserrat";
-      color: $white;
-      margin: 0;
-      margin: 25px 0 0 0;
-      letter-spacing: 4px;
-    }
     h2 {
       font-size: 50px;
       margin: 25px 0 0 0;

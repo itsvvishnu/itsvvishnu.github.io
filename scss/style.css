@@ -149,6 +149,12 @@ a.get-in-touch:hover {
   color: #f8fafd;
 }
 
+section.about h4 {
+  margin-top: 40px;
+  font-size: 25px;
+  color: #091d29;
+}
+
 section.work .projects {
   margin-top: 50px;
 }
@@ -455,7 +461,6 @@ section.hero .navbar nav .logo a {
 section.hero .navbar nav .logo a svg {
   height: 30px;
   stroke-width: 10px;
-  fill: #ffffff;
   fill: #5d4fff;
 }
 
@@ -475,17 +480,6 @@ section.hero .intro {
           flex: 1;
   padding-top: 100px;
   position: relative;
-}
-
-section.hero .intro span {
-  font-size: 28px;
-  margin-top: 60px;
-  font-weight: 600;
-  font-family: "Montserrat";
-  color: #ffffff;
-  margin: 0;
-  margin: 25px 0 0 0;
-  letter-spacing: 4px;
 }
 
 section.hero .intro h2 {

@@ -10,36 +10,62 @@
     <circle id="Ellipse_1" data-name="Ellipse 1" cx="3" cy="3" r="3" transform="translate(1212 328)" fill="#eb5347"/>
     <circle id="Ellipse_2" data-name="Ellipse 2" cx="3" cy="3" r="3" transform="translate(1230 328)" fill="#59c725"/>
     <circle id="Ellipse_3" data-name="Ellipse 3" cx="3" cy="3" r="3" transform="translate(1221 328)" fill="#f3ba28"/>
-    <rect id="Rectangle_9" data-name="Rectangle 9" width="135" height="69" rx="6" transform="translate(1331 362)" fill="#d8d8d8"/>
-    <rect id="Rectangle_10" data-name="Rectangle 10" width="135" height="69" rx="6" transform="translate(1592 455)" fill="#d8d8d8"/>
-    <rect id="Rectangle_11" data-name="Rectangle 11" width="135" height="69" rx="6" transform="translate(1331 544)" fill="#d8d8d8"/>
+    <rect id="Rectangle_9" data-name="Rectangle 9" width="135" height="69" rx="6" transform="translate(1331 362)" fill="#d8d8d8">
+     <animate attributeName="fill-opacity"
+             values="0.8;1" dur="1s"
+             repeatCount="indefinite"/>
+    </rect>
+    <rect id="Rectangle_10" data-name="Rectangle 10" width="135" height="69" rx="6" transform="translate(1592 455)" fill="#d8d8d8">
+        <animate attributeName="fill-opacity"
+             values="0.8;1" dur="1s"
+             repeatCount="indefinite"/>
+    </rect>
+    <rect id="Rectangle_11" data-name="Rectangle 11" width="135" height="69" rx="6" transform="translate(1331 544)" fill="#d8d8d8">
+        <animate attributeName="fill-opacity"
+             values="0.8;1" dur="1s"
+             repeatCount="indefinite"/>
+    </rect>
+     <defs>
+    <linearGradient id="light-fill">
+      <stop offset="0" stop-color="#d8d8d8ca">
+        <animate dur="0.5s" attributeName="offset" fill="freeze" from="0" to="1" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="0" stop-color="#d8d8d8">
+        <animate dur="0.5s" attributeName="offset" fill="freeze" from="0" to="1" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+  </defs>
     <g id="Group_1" data-name="Group 1" transform="translate(34 30)">
-      <rect id="Rectangle_12" data-name="Rectangle 12" width="233" height="7" rx="3.5" transform="translate(1460 332)" fill="#d8d8d8"/>
-      <rect id="Rectangle_13" data-name="Rectangle 13" width="233" height="7" rx="3.5" transform="translate(1460 394)" fill="#d8d8d8"/>
-      <rect id="Rectangle_14" data-name="Rectangle 14" width="233" height="7" rx="3.5" transform="translate(1460 348)" fill="#d8d8d8"/>
-      <rect id="Rectangle_15" data-name="Rectangle 15" width="233" height="7" rx="3.5" transform="translate(1460 363)" fill="#d8d8d8"/>
-      <rect id="Rectangle_16" data-name="Rectangle 16" width="233" height="7" rx="3.5" transform="translate(1460 379)" fill="#d8d8d8"/>
+      <rect id="Rectangle_12" data-name="Rectangle 12" width="233" height="7" rx="3.5" transform="translate(1460 332)" fill="url(#light-fill)"/>
+      <rect id="Rectangle_13" data-name="Rectangle 13" width="233" height="7" rx="3.5" transform="translate(1460 394)" fill="url(#light-fill)"/>
+      <rect id="Rectangle_14" data-name="Rectangle 14" width="233" height="7" rx="3.5" transform="translate(1460 348)" fill="url(#light-fill)"/>
+      <rect id="Rectangle_15" data-name="Rectangle 15" width="233" height="7" rx="3.5" transform="translate(1460 363)" fill="url(#light-fill)"/>
+      <rect id="Rectangle_16" data-name="Rectangle 16" width="233" height="7" rx="3.5" transform="translate(1460 379)" fill="url(#light-fill)"/>
     </g>
     <g id="Group_3" data-name="Group 3" transform="translate(34 30)">
       <g id="Group_2" data-name="Group 2" transform="translate(-163 93)">
-        <rect id="Rectangle_12-2" data-name="Rectangle 12" width="233" height="7" rx="3.5" transform="translate(1460 332)" fill="#d8d8d8"/>
-        <rect id="Rectangle_13-2" data-name="Rectangle 13" width="233" height="7" rx="3.5" transform="translate(1460 394)" fill="#d8d8d8"/>
-        <rect id="Rectangle_14-2" data-name="Rectangle 14" width="233" height="7" rx="3.5" transform="translate(1460 348)" fill="#d8d8d8"/>
-        <rect id="Rectangle_15-2" data-name="Rectangle 15" width="233" height="7" rx="3.5" transform="translate(1460 363)" fill="#d8d8d8"/>
-        <rect id="Rectangle_16-2" data-name="Rectangle 16" width="233" height="7" rx="3.5" transform="translate(1460 379)" fill="#d8d8d8"/>
+        <rect id="Rectangle_12-2" data-name="Rectangle 12" width="233" height="7" rx="3.5" transform="translate(1460 332)" fill="url(#light-fill)"/>
+        <rect id="Rectangle_13-2" data-name="Rectangle 13" width="233" height="7" rx="3.5" transform="translate(1460 394)" fill="url(#light-fill)"/>
+        <rect id="Rectangle_14-2" data-name="Rectangle 14" width="233" height="7" rx="3.5" transform="translate(1460 348)" fill="url(#light-fill)"/>
+        <rect id="Rectangle_15-2" data-name="Rectangle 15" width="233" height="7" rx="3.5" transform="translate(1460 363)" fill="url(#light-fill)"/>
+        <rect id="Rectangle_16-2" data-name="Rectangle 16" width="233" height="7" rx="3.5" transform="translate(1460 379)" fill="url(#light-fill)"/>
       </g>
     </g>
     <g id="Group_4" data-name="Group 4" transform="translate(194 119)">
       <g id="Group_2-2" data-name="Group 2" transform="translate(-163 93)">
-        <rect id="Rectangle_12-3" data-name="Rectangle 12" width="233" height="7" rx="3.5" transform="translate(1460 332)" fill="#d8d8d8"/>
-        <rect id="Rectangle_13-3" data-name="Rectangle 13" width="233" height="7" rx="3.5" transform="translate(1460 394)" fill="#d8d8d8"/>
-        <rect id="Rectangle_14-3" data-name="Rectangle 14" width="233" height="7" rx="3.5" transform="translate(1460 348)" fill="#d8d8d8"/>
-        <rect id="Rectangle_15-3" data-name="Rectangle 15" width="233" height="7" rx="3.5" transform="translate(1460 363)" fill="#d8d8d8"/>
-        <rect id="Rectangle_16-3" data-name="Rectangle 16" width="233" height="7" rx="3.5" transform="translate(1460 379)" fill="#d8d8d8"/>
+        <rect id="Rectangle_12-3" data-name="Rectangle 12" width="233" height="7" rx="3.5" transform="translate(1460 332)" fill="url(#light-fill)"/>
+        <rect id="Rectangle_13-3" data-name="Rectangle 13" width="233" height="7" rx="3.5" transform="translate(1460 394)" fill="url(#light-fill)"/>
+        <rect id="Rectangle_14-3" data-name="Rectangle 14" width="233" height="7" rx="3.5" transform="translate(1460 348)" fill="url(#light-fill)"/>
+        <rect id="Rectangle_15-3" data-name="Rectangle 15" width="233" height="7" rx="3.5" transform="translate(1460 363)" fill="url(#light-fill)"/>
+        <rect id="Rectangle_16-3" data-name="Rectangle 16" width="233" height="7" rx="3.5" transform="translate(1460 379)" fill="url(#light-fill)"/>
       </g>
     </g>
     <g id="Group_5" data-name="Group 5" transform="translate(34 30)">
-      <circle id="Ellipse_4" data-name="Ellipse 4" cx="10.5" cy="10.5" r="10.5" transform="translate(1183 341)" fill="#b1b1b1"/>
+      <circle id="Ellipse_4" data-name="Ellipse 4" cx="10.5" cy="10.5" r="10.5" transform="translate(1183 341)" fill="#b1b1b1">
+           <animate attributeName="fill-opacity"
+             values="0.7;1" dur="1s"
+             repeatCount="indefinite"/>
+      </circle>
       <rect id="Rectangle_17" data-name="Rectangle 17" width="52" height="10" rx="5" transform="translate(1214 347)" fill="#b1b1b1"/>
     </g>
     <g id="Group_6" data-name="Group 6">
