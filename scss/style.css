@@ -109,6 +109,15 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
 }
 
+.bar-animate .animate-item {
+  -webkit-animation: animateWidth 2s 2s;
+          animation: animateWidth 2s 2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(0.09, 0.8, 0.24, 0.77);
+          animation-timing-function: cubic-bezier(0.09, 0.8, 0.24, 0.77);
+}
+
 @-webkit-keyframes animateOpacity {
   0% {
     opacity: 0;
@@ -124,6 +133,24 @@ h1, h2, h3, h4, h5, h6 {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes animateWidth {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes animateWidth {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
   }
 }
 
@@ -153,6 +180,41 @@ section.about h4 {
   margin-top: 40px;
   font-size: 25px;
   color: #091d29;
+}
+
+section.about .skill-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 20px 0 0 0;
+  color: #091d29;
+}
+
+section.about .skill-inner .skill-item {
+  margin-right: 40px;
+  margin-top: 40px;
+}
+
+section.about .skill-inner .skill-item .bar-outer .bar {
+  display: inline-block;
+  width: 280px;
+  height: 6px;
+  background-color: #cecee2;
+  position: relative;
+  border-radius: 7px;
+  margin-right: 10px;
+  color: #292929;
+}
+
+section.about .skill-inner .skill-item .bar-outer .bar .animate-item {
+  display: inline-block;
+  background-color: #5d4fff;
+  height: inherit;
+  position: absolute;
+  border-radius: 7px;
+  left: 0;
 }
 
 section.work .projects {

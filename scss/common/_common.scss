@@ -83,12 +83,26 @@ h1,h2,h3,h4,h5,h6{
 .half{
   display: flex;
 }
-
+.bar-animate{
+  .animate-item{
+    animation: animateWidth 2s 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.09, 0.8, 0.24, 0.77);
+  }
+}
 @keyframes animateOpacity {
   0% {
     opacity: 0;
   }
   100% {
     opacity: 1;
+  }
+}
+@keyframes animateWidth{
+  0%{
+    width: 0%;
+  }
+  100%{
+    width: 100%;
   }
 }

@@ -4,4 +4,34 @@ section.about{
     font-size: 25px;
     color: $dark;
   }
+  .skill-inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0 0 0;
+    color: $dark;
+    .skill-item{
+      margin-right: 40px;
+      margin-top: 40px;
+      .bar-outer{
+        .bar{
+          display: inline-block;
+          width: 280px;
+          height: 6px;
+          background-color: $light-primary;
+          position: relative;
+          border-radius: 7px;
+          margin-right: 10px;
+          color: $text;
+          .animate-item{
+            display: inline-block;
+            background-color: $primary;
+            height: inherit;
+            position: absolute;
+            border-radius: 7px;
+            left: 0;
+          }
+        }
+      }
+    }
+  }
 }
