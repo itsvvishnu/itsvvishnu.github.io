@@ -1,7 +1,3 @@
-let about = document.getElementById("about");
-let experience = document.getElementById("experience");
-let work = document.getElementById("work");
-let contact = document.getElementById("contact");
 let navbarItems = document.querySelectorAll("#navbar a.nav-item");
 let scrollOffSet = 50;
 
@@ -13,9 +9,9 @@ window.addEventListener("scroll", (event) => {
   } 
   else {
     document.getElementById("navbar").classList.remove("sticky");
+    document.getElementById("navbar").querySelector("nav").classList.remove("container");
   }
   Array.from(navbarItems).map(link =>{
-    console.log(link)
     let section = document.querySelector(link.hash);
     if (
       section.offsetTop <= scroll &&
@@ -67,7 +63,6 @@ document.getElementById("navItems").addEventListener("click", (e) => {
     });
     e.target.classList.add("active");
     let hash = e.target.hash;
-    console.log(hash);
     document
       .querySelector(hash)
       .scrollIntoView({ behavior: "smooth", block: "start", inline: "start" });

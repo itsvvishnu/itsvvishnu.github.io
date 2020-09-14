@@ -128,8 +128,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a.get-in-touch {
-  border: 2px solid #dee2ff;
-  color: #fff;
+  border: 2px solid #5d4fff;
+  color: #5d4fff;
   font-size: 20px;
   font-weight: 500;
   display: block;
@@ -361,6 +361,10 @@ section.experience .work-place .details .overlay-outer .item {
   display: none;
 }
 
+section.experience .work-place .details .overlay-outer .item h2 a {
+  font-family: "Montserrat", sans-serif;
+}
+
 section.experience .work-place .details .overlay-outer .item.show {
   display: block;
   -webkit-animation: animateOpacity 1s ease-in-out;
@@ -378,11 +382,20 @@ section.hero {
   -webkit-box-direction: normal;
       -ms-flex-flow: column;
           flex-flow: column;
-  background: linear-gradient(120deg, rgba(94, 79, 255, 0.925) 0%, rgba(96, 114, 255, 0.8) 100%), url("../assets/bg.jpg");
+  background: #f8fafd;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-blend-mode: hard-light;
+}
+
+section.hero .draw img {
+  display: block;
+  position: absolute;
+  width: 300px;
+  right: 0px;
+  top: 138px;
 }
 
 section.hero .navbar {
@@ -400,8 +413,20 @@ section.hero .navbar.sticky {
   z-index: 9;
   background-blend-mode: multiply;
   background: linear-gradient(120deg, #5d4fff 0%, #6072ff 100%);
-  -webkit-box-shadow: 0 0 4px #00000085;
-          box-shadow: 0 0 4px #00000085;
+  -webkit-box-shadow: 0 0 4px #0000006c;
+          box-shadow: 0 0 4px #0000006c;
+}
+
+section.hero .navbar.sticky .logo svg {
+  fill: #ffffff;
+}
+
+section.hero .navbar.sticky a {
+  color: #cecee2;
+}
+
+section.hero .navbar.sticky a:hover, section.hero .navbar.sticky a.active {
+  color: #ffffff;
 }
 
 section.hero .navbar nav {
@@ -418,19 +443,19 @@ section.hero .navbar nav {
 }
 
 section.hero .navbar nav a {
-  color: #cecee2;
-  padding: 10px;
+  color: #292929;
+  padding: 10px 0;
   -webkit-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 section.hero .navbar nav a:hover, section.hero .navbar nav a.active {
-  color: #ffffff;
+  color: #5d4fff;
 }
 
 section.hero .navbar nav a + a {
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 section.hero .navbar nav .logo a {
@@ -441,6 +466,7 @@ section.hero .navbar nav .logo a svg {
   height: 30px;
   stroke-width: 10px;
   fill: #ffffff;
+  fill: #5d4fff;
 }
 
 section.hero .intro {
@@ -457,10 +483,12 @@ section.hero .intro {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
+  padding-top: 100px;
+  position: relative;
 }
 
 section.hero .intro span {
-  font-size: 56px;
+  font-size: 28px;
   margin-top: 60px;
   font-weight: 600;
   font-family: "Montserrat";
@@ -471,11 +499,12 @@ section.hero .intro span {
 }
 
 section.hero .intro h2 {
-  font-size: 56px;
+  font-size: 50px;
   margin: 25px 0 0 0;
-  color: #f8fafd;
-  opacity: 0.95;
+  color: #091d29;
   letter-spacing: 4px;
+  line-height: 70px;
+  max-width: 600px;
 }
 
 section.hero .intro p {
@@ -483,11 +512,11 @@ section.hero .intro p {
   line-height: 30px;
   font-size: 18px;
   margin: 25px 0 0 0;
-  color: #c4cbff;
+  color: #292929;
 }
 
 footer.sep {
-  padding: 60px 0;
+  padding: 100px 0;
 }
 
 footer .static-social {

@@ -99,6 +99,11 @@ section.experience{
           transition: all ease-in-out 0.5s;
           opacity: 0;
           display: none;
+          h2{
+            a{
+              font-family: "Montserrat", sans-serif;
+            }
+          }
           &.show{
             display: block;
             animation: animateOpacity 1s ease-in-out;

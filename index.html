@@ -16,11 +16,11 @@
 </head>
 
 <body id="body">
-  <section class="hero">
+  <section class="hero" id="home">
     <div class="container">
-      <div id="navbar" class="navbar">
-        <nav class="nav" data-aos="fade-right" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000"
-          data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true">
+      <div id="navbar" class="navbar" data-aos="fade-right" data-aos-offset="100" data-aos-delay="100" data-aos-duration="1000"
+      data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
+        <nav class="nav">
           <div class="half">
             <div class="logo">
               <a href="https://itsvvishnu.github.io/">
@@ -32,36 +32,35 @@
             </div>
           </div>
           <div class="half end" id="navItems">
+            <a href="#home" class="nav-item active">Home</a>
             <a href="#about" class="nav-item">About</a>
             <a href="#experience" class="nav-item">Experience</a>
             <a href="#work" class="nav-item">Work</a>
             <a href="#contact" class="nav-item">Contact</a>
-            <a href="" class="resume">Resume</a>
           </div>
         </nav>
       </div>
-      <div class="intro" data-aos="fade-up" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000"
-        data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true"
-        data-aos-anchor-placement="top-center">
-        <span> Vishnu V</span>
-        <h2>I'm a Front-end Developer</h2>
-        <p>
-          I'm a Front-end engineer based in Kerala, I develop and design
-          (occasionally) websites and hybrid desktop and mobile applications.
-        </p>
-        <a href="mailto:vishnushanmukan@gmail.com" class="get-in-touch"> Contact me</a>
+      <div data-aos="fade-up" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000"
+      data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true"
+      data-aos-anchor-placement="top-center">
+      <div class="intro">
+        <div class="draw" >
+          <img src="assets/Group 8.svg" />
+        </div>
+        <h2>Make your project come to fruition </h2>
+        <p>I develop web applications , hybrid desktop & mobile applications</p>
+        <a href="mailto:vishnushanmukan@gmail.com" class="get-in-touch"> Hire me</a>
       </div>
     </div>
+    </div>
   </section>
-  <section class="sep about" id="about" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
-    data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true" data-aos-anchor-placement="top-bottom">
+  <section class="sep about" id="about" data-aos="fade-up" data-aos-offset="100" data-aos-delay="100" data-aos-duration="1000"
+    data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="false" data-aos-anchor-placement="top-bottom">
     <div class="container">
       <h3>About me</h3>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
-        voluptates distinctio pariatur nihil aperiam ipsa delectus. Magnam quae
-        aut dolore vel sunt, amet aliquid? Omnis amet culpa iste eius
-        asperiores.
+        I'm a Front-end engineer with 2 year experience in web development.
+        I develop websites and hybrid desktop and mobile applications. 
       </p>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minus
@@ -69,10 +68,13 @@
         aut dolore vel sunt, amet aliquid? Omnis amet culpa iste eius
         asperiores.
       </p>
+      <div class="skills">
+        <h4>My skills</h4>
+      </div>
     </div>
   </section>
-  <section class="sep experience" id="experience" data-aos="fade-up" data-aos-offset="50" data-aos-delay="100"
-    data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true"
+  <section class="sep experience" id="experience" data-aos="fade-up" data-aos-offset="100" data-aos-delay="100"
+    data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false"
     data-aos-anchor-placement="top-center">
     <div class="container">
       <h3>Experience</h3>
@@ -103,7 +105,7 @@
         <div class="details">
           <div class="overlay-outer" id="workDet">
             <div class="item show" id="wudi">
-              <h2>Product Developer <a href="https://www.datawudi.com/">@Wudi</a></h2>
+              <h2>Product Developer at <a href="https://www.datawudi.com/">Wudi</a></h2>
               <span>June 2019 - Present</span>
               <ul>
                 <li class="icon-angle-right">
@@ -116,7 +118,7 @@
               </ul>
             </div>
             <div class="item" id="pf">
-              <h2>Front-end Developer <a href="https://pixelflames.com/">@Pixelflames</a></h2>
+              <h2>Front-end Developer at <a href="https://pixelflames.com/">Pixelflames</a></h2>
               <span>October 2018 - May 2019</span>
               <ul>
                 <li class="icon-angle-right">
@@ -139,8 +141,8 @@
       </div>
     </div>
   </section>
-  <section class="sep work" id="work" data-aos="fade-up" data-aos-offset="50" data-aos-delay="100"
-    data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true"
+  <section class="sep work" id="work" data-aos="fade-up" data-aos-offset="100" data-aos-delay="100"
+    data-aos-duration="1000" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="false"
     data-aos-anchor-placement="top-center">
     <div class="container">
       <h3>My Projects</h3>
@@ -162,8 +164,8 @@
       </div>
     </div>
   </section>
-  <section class="contact sep" id="contact" data-aos="fade-up" data-aos-offset="-200" data-aos-delay="50"
-    data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="true"
+  <section class="contact sep" id="contact" data-aos="fade-up" data-aos-offset="100" data-aos-delay="100"
+    data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-mirror="false" data-aos-once="false"
     data-aos-anchor-placement="top-center">
     <div class="container">
       <h3>Contact me</h3>
@@ -178,8 +180,8 @@
   </section>
   <footer class="sep">
     <div class="container">
-      <div class="static-social" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50" data-aos-duration="1000"
-      data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="true">
+      <div class="static-social" data-aos="fade-up" data-aos-offset="100" data-aos-delay="100" data-aos-duration="1000"
+      data-aos-easing="ease-in-out" data-aos-mirror="true" data-aos-once="false">
       <ul class="" id="social">
         <li>
           <a href="https://github.com/itsvvishnu">
