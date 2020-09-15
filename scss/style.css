@@ -86,8 +86,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .sep h3::after {
   content: "";
+  border-radius: 4px;
   width: 500px;
-  height: 1px;
+  height: 2px;
   margin: auto 0 auto 20px;
   background-color: rgba(93, 79, 255, 0.5);
   display: inline-block;
