@@ -628,11 +628,11 @@ footer .static-social ul li a + a {
 }
 
 footer .static-social ul li a:hover span {
-  color: #5d4fff;
+  color: #292929;
 }
 
 footer .static-social ul li a:hover svg {
-  fill: #5d4fff;
+  fill: #292929;
 }
 
 footer .static-social ul li + li {
