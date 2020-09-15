@@ -564,29 +564,31 @@ section.hero .intro p {
 
 footer.sep {
   padding: 40px 0;
+  background-color: #f8fafd;
 }
 
 footer .static-social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 footer .static-social ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 50%;
 }
 
 footer .static-social ul li {
@@ -620,8 +622,6 @@ footer .static-social ul li a svg {
   fill: #757575;
   width: 20px;
   margin-right: 20px;
-  -webkit-transition: fill ease-in-out 0.5s;
-  transition: fill ease-in-out 0.5s;
 }
 
 footer .static-social ul li a + a {
@@ -633,7 +633,23 @@ footer .static-social ul li a:hover span {
 }
 
 footer .static-social ul li a:hover svg {
-  fill: #292929;
+  fill: #091d29;
+}
+
+footer .static-social ul li a:hover svg.git {
+  fill: #24292e;
+}
+
+footer .static-social ul li a:hover svg.ln {
+  fill: #0177b5;
+}
+
+footer .static-social ul li a:hover svg.so .light {
+  fill: #bcbbbb;
+}
+
+footer .static-social ul li a:hover svg.so .orange {
+  fill: #f48031;
 }
 
 footer .static-social ul li + li {
@@ -641,17 +657,14 @@ footer .static-social ul li + li {
 }
 
 footer .static-social .copy {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 40px;
+  display: inline-block;
 }
 
 footer .static-social .copy span {
-  text-align: center;
   color: #757575;
+  display: inline-block;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,15 +1,17 @@
 footer{
   &.sep{
     padding:40px 0;
+    background-color: $light;
   }
   .static-social{
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
     ul{
       display: flex;
-      justify-content: center;
       align-items: center;
-      width: 100%;
+      width: 50%;
       li{
         display: flex;
         align-items: center;
@@ -25,7 +27,6 @@ footer{
             fill: $gray;
             width: 20px;
             margin-right: 20px;
-            transition: fill ease-in-out 0.5s;
           }
           + a{
             margin-left: 20px;
@@ -35,7 +36,21 @@ footer{
               color: $text;
             }
             svg{
-              fill: $text;
+              &.git{
+                fill: #24292e;
+              }
+              &.ln{
+                fill: #0177b5;
+              }
+              &.so{
+                .light{
+                  fill: #bcbbbb;
+                }
+                .orange{
+                  fill: #f48031;
+                }
+              }
+              fill: $dark;
             }
           }
         }
@@ -45,12 +60,11 @@ footer{
       }
     }
     .copy{
-      display: flex;
-      justify-content: center;
-      margin-top: 40px;
+      display: inline-block;
       span{
-        text-align: center;
         color: $gray;
+        display: inline-block;
+        width: max-content;
       }
     }
   }

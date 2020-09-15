@@ -3,21 +3,30 @@ let scrollOffSet = 50;
 
 window.addEventListener("scroll", (event) => {
   var scroll = this.scrollY;
-  if(document.getElementById("about").offsetTop <= scroll){
+  if (document.getElementById("about").offsetTop <= scroll) {
     document.getElementById("skills").classList.add("bar-animate");
   }
   if (scroll >= screen.height - 250) {
     document.getElementById("navbar").classList.add("sticky");
-    document.getElementById("navbar").querySelector("nav").classList.add("container");
-  } 
-  else {
+    document
+      .getElementById("navbar")
+      .querySelector("nav")
+      .classList.add("container");
+  } else {
     document.getElementById("navbar").classList.remove("sticky");
-    document.getElementById("navbar").querySelector("nav").classList.remove("container");
+    document
+      .getElementById("navbar")
+      .querySelector("nav")
+      .classList.remove("container");
   }
-  Array.from(navbarItems).map(link =>{
+  Array.from(navbarItems).map((link) => {
     let section = document.querySelector(link.hash);
-  if(!(document.documentElement.scrollTop + window.innerHeight == document.documentElement.scrollHeight))
-    {
+    if (
+      !(
+        document.documentElement.scrollTop + window.innerHeight ==
+        document.documentElement.scrollHeight
+      )
+    ) {
       if (
         section.offsetTop <= scroll &&
         section.offsetTop + section.offsetHeight > scroll
@@ -27,8 +36,7 @@ window.addEventListener("scroll", (event) => {
         link.classList.remove("active");
       }
     }
-
-  })
+  });
 });
 
 //ANIMATION INIT
@@ -64,11 +72,6 @@ document.getElementById("workPlace").addEventListener("click", function (e) {
 //SCROLL
 document.getElementById("navItems").addEventListener("click", (e) => {
   if (e.target && e.target.matches("a.nav-item")) {
-    let navLinks = document.getElementById("navItems").children;
-    Array.from(navLinks).map((nav) => {
-      nav.classList.remove("active");
-    });
-    e.target.classList.add("active");
     let hash = e.target.hash;
     document
       .querySelector(hash)
@@ -76,14 +79,16 @@ document.getElementById("navItems").addEventListener("click", (e) => {
   }
 });
 
-document.addEventListener('scroll', function (event) {
-  if(document.documentElement.scrollTop + window.innerHeight == document.documentElement.scrollHeight)
-  {
-    Array.from(navbarItems).map(nav =>{
+document.addEventListener("scroll", function (event) {
+  if (
+    document.documentElement.scrollTop + window.innerHeight ==
+    document.documentElement.scrollHeight 
+  ) {
+    Array.from(navbarItems).map((nav) => {
       nav.classList.remove("active");
-      if(nav.hash == "#contact"){
+      if (nav.hash == "#contact") {
         nav.classList.add("active");
       }
-    })
+    });
   }
 });
