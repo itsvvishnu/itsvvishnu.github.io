@@ -31,6 +31,9 @@ html{
   padding: 0;
   scroll-behavior: smooth;
 }
+section{
+  transition: filter ease-in-out 0.5s;
+}
 body {
   margin: 0;
   padding: 0;
@@ -71,6 +74,10 @@ h1,h2,h3,h4,h5,h6{
       display: inline-block;
       top: -6px;
       position: relative;
+      @media(max-width: 768px){
+        width: 100%;
+        margin-left: 0;
+      }
     }
   }
   p{
@@ -83,6 +90,12 @@ h1,h2,h3,h4,h5,h6{
 }
 .half{
   display: flex;
+}
+.hide{
+  display: none;
+}
+.blur{
+  filter: blur(3px);
 }
 .bar-animate{
   .animate-item{

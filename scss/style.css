@@ -44,6 +44,13 @@ html {
   scroll-behavior: smooth;
 }
 
+section {
+  -webkit-transition: -webkit-filter ease-in-out 0.5s;
+  transition: -webkit-filter ease-in-out 0.5s;
+  transition: filter ease-in-out 0.5s;
+  transition: filter ease-in-out 0.5s, -webkit-filter ease-in-out 0.5s;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -96,6 +103,13 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .sep h3::after {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
 .sep p {
   max-width: 700px;
   line-height: 30px;
@@ -108,6 +122,15 @@ h1, h2, h3, h4, h5, h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+.blur {
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
 }
 
 .bar-animate .animate-item {
@@ -198,6 +221,13 @@ section.about .skill-inner .skill-item {
   margin-top: 40px;
 }
 
+@media (max-width: 992px) {
+  section.about .skill-inner .skill-item {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
 section.about .skill-inner .skill-item .bar-outer .bar {
   display: inline-block;
   width: 280px;
@@ -207,6 +237,12 @@ section.about .skill-inner .skill-item .bar-outer .bar {
   border-radius: 7px;
   margin-right: 10px;
   color: #292929;
+}
+
+@media (max-width: 992px) {
+  section.about .skill-inner .skill-item .bar-outer .bar {
+    width: calc(100% - 60px);
+  }
 }
 
 section.about .skill-inner .skill-item .bar-outer .bar .animate-item {
@@ -527,6 +563,26 @@ section.hero .navbar nav .logo a svg {
   fill: #5d4fff;
 }
 
+@media (max-width: 768px) {
+  section.hero .navbar .half.end .nav-links {
+    display: none;
+  }
+}
+
+section.hero .navbar .half.end .menu {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  section.hero .navbar .half.end .menu {
+    width: 50px;
+    display: block;
+  }
+  section.hero .navbar .half.end .menu svg {
+    fill: #091d29;
+  }
+}
+
 section.hero .intro {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -562,6 +618,58 @@ section.hero .intro p {
   color: #757575;
 }
 
+.nav-links-mob {
+  -webkit-filter: blur(0);
+          filter: blur(0);
+  display: none;
+  position: fixed;
+  background-color: #ffffff;
+  min-height: 100vh;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  padding: 30px 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+}
+
+@media (max-width: 768px) {
+  .nav-links-mob.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.nav-links-mob .close {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav-links-mob svg {
+  width: 25px;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  fill: #091d29;
+}
+
+.nav-links-mob a {
+  margin-top: 60px;
+  text-align: center;
+  color: #091d29;
+}
+
+.nav-links-mob a.active {
+  color: #5d4fff;
+}
+
 footer.sep {
   padding: 40px 0;
   background-color: #f8fafd;
@@ -581,6 +689,18 @@ footer .static-social {
           justify-content: space-between;
 }
 
+@media (max-width: 992px) {
+  footer .static-social {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 footer .static-social ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -589,6 +709,24 @@ footer .static-social ul {
       -ms-flex-align: center;
           align-items: center;
   width: 50%;
+}
+
+@media (max-width: 991px) {
+  footer .static-social ul {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 540px) {
+  footer .static-social ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
 }
 
 footer .static-social ul li {
@@ -628,6 +766,13 @@ footer .static-social ul li a + a {
   margin-left: 20px;
 }
 
+@media (max-width: 540px) {
+  footer .static-social ul li a + a {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+}
+
 footer .static-social ul li a:hover span {
   color: #292929;
 }
@@ -654,6 +799,13 @@ footer .static-social ul li a:hover svg.so .orange {
 
 footer .static-social ul li + li {
   margin-left: 60px;
+}
+
+@media (max-width: 540px) {
+  footer .static-social ul li + li {
+    margin-left: 0;
+    margin-top: 20px;
+  }
 }
 
 footer .static-social .copy {

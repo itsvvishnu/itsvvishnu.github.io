@@ -1,4 +1,5 @@
 let navbarItems = document.querySelectorAll("#navbar a.nav-item");
+let navbarItemsMob = document.querySelectorAll("#navLinks a");
 let scrollOffSet = 50;
 
 window.addEventListener("scroll", (event) => {
@@ -20,6 +21,24 @@ window.addEventListener("scroll", (event) => {
       .classList.remove("container");
   }
   Array.from(navbarItems).map((link) => {
+    let section = document.querySelector(link.hash);
+    if (
+      !(
+        document.documentElement.scrollTop + window.innerHeight ==
+        document.documentElement.scrollHeight
+      )
+    ) {
+      if (
+        section.offsetTop <= scroll &&
+        section.offsetTop + section.offsetHeight > scroll
+      ) {
+        link.classList.add("active");
+      } else {
+        link.classList.remove("active");
+      }
+    }
+  });
+  Array.from(navbarItemsMob).map((link) => {
     let section = document.querySelector(link.hash);
     if (
       !(
@@ -92,3 +111,17 @@ document.addEventListener("scroll", function (event) {
     });
   }
 });
+
+
+function startNavBar(){
+  document.getElementById("navLinks").classList.add("active");
+  Array.from(document.querySelectorAll("section")).map(section=>{
+    section.classList.add("blur");
+  })
+}
+function closeNavBar(){
+  document.getElementById("navLinks").classList.remove("active");
+  Array.from(document.querySelectorAll("section")).map(section=>{
+    section.classList.remove("blur");
+  })
+}

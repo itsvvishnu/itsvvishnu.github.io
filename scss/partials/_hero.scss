@@ -73,6 +73,25 @@ section.hero{
         }
       }
     }
+    .half{
+      &.end{
+        .nav-links{
+          @media(max-width: 768px){
+            display: none;
+          }
+        }
+        .menu{
+          display: none;
+          @media(max-width: 768px){
+            width: 50px;
+            display: block;
+            svg{
+              fill: $dark;
+            }
+          }
+        }
+      }
+    }
   }
   .intro{
     display: flex;
@@ -95,6 +114,43 @@ section.hero{
       font-size: 18px;
       margin: 25px 0 0 0;
       color: $gray;
+    }
+  }
+}
+
+
+.nav-links-mob{
+  &.active{
+    @media(max-width: 768px){
+      display: flex;
+    }
+  }
+  filter: blur(0);
+  display: none;
+  position: fixed;
+  background-color: $white;
+  min-height: 100vh;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  padding: 30px 20px;
+  flex-direction: column;
+  width: 60%;
+  .close{
+    justify-content: flex-end;
+    display: flex;
+  }
+  svg{
+    width: 25px;
+    align-self: flex-end;
+    fill: $dark;
+  }
+  a{
+    margin-top: 60px;
+    text-align: center;
+    color: $dark;
+    &.active{
+      color: $primary;
     }
   }
 }
