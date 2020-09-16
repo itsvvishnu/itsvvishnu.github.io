@@ -491,6 +491,12 @@ section.hero .draw img {
   top: 138px;
 }
 
+@media (max-width: 992px) {
+  section.hero .draw img {
+    display: none;
+  }
+}
+
 section.hero .navbar {
   padding: 20px 0;
 }
@@ -599,6 +605,12 @@ section.hero .intro {
           flex: 1;
   padding-top: 100px;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  section.hero .intro {
+    padding-top: 40px;
+  }
 }
 
 section.hero .intro h2 {

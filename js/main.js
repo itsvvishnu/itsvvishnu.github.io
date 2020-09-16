@@ -118,10 +118,12 @@ function startNavBar(){
   Array.from(document.querySelectorAll("section")).map(section=>{
     section.classList.add("blur");
   })
+  document.querySelector("footer").classList.add("blur");
 }
 function closeNavBar(){
   document.getElementById("navLinks").classList.remove("active");
   Array.from(document.querySelectorAll("section")).map(section=>{
     section.classList.remove("blur");
-  })
+  });
+  document.querySelector("footer").classList.remove("blur");
 }
