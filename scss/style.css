@@ -181,23 +181,27 @@ h1, h2, h3, h4, h5, h6 {
 a.get-in-touch {
   border: 2px solid #6072ff;
   color: #6072ff;
-  font-size: 20px;
+  font-size: 16px;
   font-weight: 500;
   display: block;
   margin-top: 25px;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
-  padding: 15px 30px;
+  padding: 10px 30px;
   font-family: "PT Sans Caption", sans-serif;
   border-radius: 4px;
   -webkit-transition: all ease-in-out 1s;
   transition: all ease-in-out 1s;
 }
 
-a.get-in-touch:hover {
+a.get-in-touch.fill {
   background-color: #6072ff;
   color: #f8fafd;
+}
+
+a.get-in-touch:hover {
+  background-color: rgba(96, 114, 255, 0.2);
 }
 
 section.about h4 {
@@ -319,11 +323,30 @@ section.work .projects .half + .half {
   margin-left: 150px;
 }
 
+section.experience {
+  padding: 80px 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(9, 29, 41, 0.8)), to(rgba(9, 29, 41, 0.85))), url("../assets/bg.jpg");
+  background: linear-gradient(180deg, rgba(9, 29, 41, 0.8) 0%, rgba(9, 29, 41, 0.85) 100%), url("../assets/bg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+section.experience h3 {
+  color: #ffffff;
+}
+
+section.experience h3::after {
+  background-color: #ffffff21;
+}
+
 section.experience .work-place {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 40px;
+  position: relative;
+  border-radius: 25px;
+  margin-top: 40px;
 }
 
 section.experience .work-place ul.companies {
@@ -419,7 +442,6 @@ section.experience .work-place ul.companies li span {
 
 section.experience .work-place .details {
   margin: 0;
-  padding: 0 40px;
 }
 
 section.experience .work-place .details h2 {
@@ -433,7 +455,8 @@ section.experience .work-place .details a {
 
 section.experience .work-place .details span {
   font-family: "PT Sans Caption", sans-serif;
-  color: #757575;
+  color: #f8fafd;
+  opacity: 0.7;
 }
 
 section.experience .work-place .details ul li {
@@ -445,13 +468,31 @@ section.experience .work-place .details ul li {
   color: #091d29;
   line-height: 30px;
   padding-left: 20px;
+  color: #f8fafd;
 }
 
 section.experience .work-place .details .overlay-outer .item {
   -webkit-transition: all ease-in-out 0.5s;
   transition: all ease-in-out 0.5s;
-  opacity: 0;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 90px;
+  margin-top: 40px;
+  position: relative;
+  background-color: #ffffff0d;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+section.experience .work-place .details .overlay-outer .item h2 {
+  display: block;
+  width: 100%;
+  color: #f8fafd;
 }
 
 section.experience .work-place .details .overlay-outer .item h2 a {
@@ -459,11 +500,69 @@ section.experience .work-place .details .overlay-outer .item h2 a {
 }
 
 section.experience .work-place .details .overlay-outer .item.show {
-  display: block;
   -webkit-animation: animateOpacity 1s ease-in-out;
           animation: animateOpacity 1s ease-in-out;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+section.experience .work-place .details .overlay-outer .item.show::before {
+  height: 100%;
+  content: '';
+  width: 2px;
+  background: #ffffff21;
+  position: absolute;
+  left: -60px;
+  bottom: -66px;
+}
+
+section.experience .work-place .details .overlay-outer .item .half {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+section.experience .work-place .details .overlay-outer .item::after {
+  content: '';
+  height: 2px;
+  background: #ffffff21;
+  position: absolute;
+  width: 50px;
+  left: -52px;
+  z-index: -11;
+  top: 35px;
+}
+
+section.experience .work-place .details .overlay-outer .company-name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section.experience .work-place .details .overlay-outer .company-name .img-wrap {
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background-color: #ffffff;
+  left: -90px;
+  top: 6px;
+  border-radius: 50%;
+}
+
+.wudi {
+  background-image: url("../../assets/wudi.png");
+  background-position: 2px -3px;
+  background-size: cover;
+}
+
+.pf {
+  background-image: url("../../assets/pf.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 section.hero {
@@ -630,6 +729,10 @@ section.hero .intro p {
   color: #757575;
 }
 
+section.hero .intro a + a {
+  margin-left: 20px;
+}
+
 .nav-links-mob {
   -webkit-filter: blur(0);
           filter: blur(0);
@@ -681,6 +784,12 @@ section.hero .intro p {
 
 .nav-links-mob a.active {
   color: #5d4fff;
+}
+
+.ctas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 footer.sep {

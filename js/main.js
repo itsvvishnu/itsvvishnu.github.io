@@ -69,24 +69,24 @@ AOS.init({
 
 //TIMELINE
 
-document.getElementById("workPlace").addEventListener("click", function (e) {
-  e.preventDefault();
-  if (e.target && e.target.matches("li *")) {
-    let that = e.target.closest("li");
-    if (!that.classList.contains("active")) {
-      Array.from(that.parentNode.children).map((li) => {
-        li.classList.remove("active");
-      });
-      that.classList.add("active");
-      let workDet = document.getElementById("workDet");
-      Array.from(workDet.children).map((c) => {
-        c.classList.remove("show");
-      });
-      let wkTarget = that.getAttribute("data-com");
-      document.getElementById(wkTarget).classList.add("show");
-    }
-  }
-});
+// document.getElementById("workPlace").addEventListener("click", function (e) {
+//   e.preventDefault();
+//   if (e.target && e.target.matches("li *")) {
+//     let that = e.target.closest("li");
+//     if (!that.classList.contains("active")) {
+//       Array.from(that.parentNode.children).map((li) => {
+//         li.classList.remove("active");
+//       });
+//       that.classList.add("active");
+//       let workDet = document.getElementById("workDet");
+//       Array.from(workDet.children).map((c) => {
+//         c.classList.remove("show");
+//       });
+//       let wkTarget = that.getAttribute("data-com");
+//       document.getElementById(wkTarget).classList.add("show");
+//     }
+//   }
+// });
 
 //SCROLL
 document.getElementById("navItems").addEventListener("click", (e) => {

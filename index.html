@@ -11,7 +11,9 @@
   <link rel="stylesheet" href="css/icon.css" />
   <link rel="stylesheet" href="scss/style.css" />
   <link rel="stylesheet" href="css/aos.css" />
+  <link rel="stylesheet" href="css/glide.core.min.css" />
   <script defer src="js/aos.js"></script>
+  <script defer src="js/glide.min.js"></script>
   <script defer src="js/main.js"></script>
 </head>
 
@@ -71,7 +73,10 @@
         </div>
         <h2>Make your project come to fruition </h2>
         <p>I develop web applications , hybrid desktop & mobile applications</p>
-        <a href="mailto:vishnushanmukan@gmail.com" class="get-in-touch"> Hire me</a>
+        <div class="ctas">
+          <a href="#work" class="get-in-touch fill"> See my work</a>
+          <a href="mailto:vishnushanmukan@gmail.com" class="get-in-touch"> Hire me</a>
+        </div>
       </div>
     </div>
     </div>
@@ -174,9 +179,9 @@
     data-aos-anchor-placement="top-center">
     <div class="container">
       <h3>Experience</h3>
-      <p>Companies where I've worked</p>
+      <!-- <p>Companies where I've worked</p> -->
       <div class="work-place">
-        <ul class="companies" id="workPlace">
+        <!-- <ul class="companies" id="workPlace">
           <li class="active" data-com="wudi">
             <a href="">
               <div class="img">
@@ -197,12 +202,18 @@
               </div>
             </a>
           </li>
-        </ul>
+        </ul> -->
         <div class="details">
           <div class="overlay-outer" id="workDet">
             <div class="item show" id="wudi">
-              <h2>Product Developer at <a href="https://www.datawudi.com/">Wudi</a></h2>
-              <span>June 2019 - Present</span>
+              <div class="half">
+                <h2>Product Developer at <a href="https://www.datawudi.com/">Wudi</a></h2>
+                <div class="company-name">
+                  <div class="img-wrap wudi active">
+                  </div>
+                </div>
+                <span>June 2019 - Present</span>
+              </div>
               <ul>
                 <li class="icon-angle-right">
                   Developed REST APIs using Java Springboot and worked with
@@ -213,9 +224,15 @@
                 </li>
               </ul>
             </div>
-            <div class="item" id="pf">
-              <h2>Front-end Developer at <a href="https://pixelflames.com/">Pixelflames</a></h2>
-              <span>October 2018 - May 2019</span>
+            <div class="item" id="wudi">
+              <div class="half">
+                <h2>Front-end Developer at <a href="https://pixelflames.com/">Pixelflames</a></h2>
+                <div class="company-name">
+                  <div class="img-wrap pf active">
+                  </div>
+                </div>
+                <span>October 2018 - May 2019</span>
+              </div>
               <ul>
                 <li class="icon-angle-right">
                   Developed designs into webpages using HTML,CSS,SCSS & Jquery

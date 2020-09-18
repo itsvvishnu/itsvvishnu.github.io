@@ -121,6 +121,11 @@ section.hero{
       margin: 25px 0 0 0;
       color: $gray;
     }
+    a{
+      +a{
+        margin-left: 20px;
+      }
+    }
   }
 }
 
@@ -160,4 +165,7 @@ section.hero{
       color: $primary;
     }
   }
+}
+.ctas{
+  display: flex;
 }

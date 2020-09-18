@@ -1,7 +1,20 @@
 section.experience{
+  padding: 80px 0;
+  background: linear-gradient(180deg, rgba($dark, 0.8) 0%, rgba($dark, 0.85) 100%),url("../assets/bg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  h3{
+    color: $white;
+    &::after{
+      background-color: #ffffff21;
+    }
+  }
   .work-place {
     display: flex;
-    padding-top: 40px;
+    position: relative;
+    border-radius: 25px;
+    margin-top: 40px;
     ul{
       &.companies {
         display: flex;
@@ -70,7 +83,7 @@ section.experience{
     }
     .details{
       margin: 0;
-      padding: 0 40px;
+      // padding: 0 40px;
       h2 {
         margin: 10px 0;
         color: $dark;
@@ -80,7 +93,8 @@ section.experience{
       }
       span {
         font-family: "PT Sans Caption", sans-serif;
-        color: $gray;
+        color: $light;
+        opacity: 0.7;
       }
       ul{
         li{
@@ -92,25 +106,80 @@ section.experience{
           color: $dark;
           line-height: 30px;
           padding-left: 20px;
+          color: $light;
         }
       }
       .overlay-outer{
         .item{
           transition: all ease-in-out 0.5s;
-          opacity: 0;
-          display: none;
+          display: flex;
+          flex-direction: column;
+          margin-left: 90px;
+          margin-top: 40px;
+          position: relative;
+          background-color: #ffffff0d;
+          padding: 10px 20px;
+          border-radius: 10px;
           h2{
+            display: block;
+            width: 100%;
+            color: $light;
             a{
               font-family: "Montserrat", sans-serif;
             }
           }
           &.show{
-            display: block;
             animation: animateOpacity 1s ease-in-out;
             animation-fill-mode: forwards;
+            &::before{
+              height: 100%;
+              content: '';
+              width: 2px;
+              background: #ffffff21;
+              position: absolute;
+              left: -60px;
+              bottom: -66px;
+            }
+          }
+          .half{
+            display: flex;
+            flex-direction: column;
+          }
+          &::after{
+            content: '';
+            height: 2px;
+            background: #ffffff21;
+            position: absolute;
+            width: 50px;
+            left: -52px;
+            z-index: -11;
+            top: 35px;
+          }
+        }
+        .company-name{
+          display: flex;
+          .img-wrap{
+            position: absolute;
+            height: 60px;
+            width: 60px;
+            background-color: $white;
+            left: -90px;
+            top: 6px;
+            border-radius: 50%;
           }
         }
       }
     }
   }
+}
+
+.wudi{
+  background-image: url("../../assets/wudi.png");
+  background-position: 2px -3px;
+  background-size: cover;
+}
+.pf{
+  background-image: url("../../assets/pf.jpg");
+  background-size: cover;
+  background-position: center;
 }
