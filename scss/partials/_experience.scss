@@ -1,15 +1,11 @@
 section.experience{
   padding: 80px 0;
-  background: linear-gradient(180deg, rgba($dark, 0.8) 0%, rgba($dark, 0.85) 100%),url("../assets/bg.jpg");
+  // background: linear-gradient(180deg, rgba($dark, 0.95) 50%, rgba($dark, 0.5) 100%),url("../assets/bg.jpg");
+  // background-color: $dark;
+  // background-image: url("../../assets/bg.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  h3{
-    color: $white;
-    &::after{
-      background-color: #ffffff21;
-    }
-  }
   .work-place {
     display: flex;
     position: relative;
@@ -83,6 +79,7 @@ section.experience{
     }
     .details{
       margin: 0;
+      width: 100%;
       // padding: 0 40px;
       h2 {
         margin: 10px 0;
@@ -93,10 +90,13 @@ section.experience{
       }
       span {
         font-family: "PT Sans Caption", sans-serif;
-        color: $light;
+        color: $dark;
         opacity: 0.7;
       }
       ul{
+        animation: heightAnim ease-in-out 0.5s;
+        transform-origin:top;
+        display: none;
         li{
           margin-top: 20px;
           position: relative;
@@ -106,80 +106,67 @@ section.experience{
           color: $dark;
           line-height: 30px;
           padding-left: 20px;
-          color: $light;
+          color: $dark;
         }
       }
       .overlay-outer{
         .item{
-          transition: all ease-in-out 0.5s;
           display: flex;
           flex-direction: column;
-          margin-left: 90px;
-          margin-top: 40px;
           position: relative;
-          background-color: #ffffff0d;
-          padding: 10px 20px;
-          border-radius: 10px;
+          padding:20px;
+          border-radius: 5px;
+          box-shadow: 0 0 10px 1px #dcdcdc69;
+          background-color: #fff;
+          max-height: fit-content;
+          transition:  all ease-in-out 1s;
+          .area-collapse{
+            cursor: pointer;
+            display: flex;
+            transition: 300ms ease all;
+          }
           h2{
             display: block;
             width: 100%;
-            color: $light;
+            color: $dark;
             a{
               font-family: "Montserrat", sans-serif;
-            }
-          }
-          &.show{
-            animation: animateOpacity 1s ease-in-out;
-            animation-fill-mode: forwards;
-            &::before{
-              height: 100%;
-              content: '';
-              width: 2px;
-              background: #ffffff21;
-              position: absolute;
-              left: -60px;
-              bottom: -66px;
             }
           }
           .half{
             display: flex;
             flex-direction: column;
           }
-          &::after{
-            content: '';
-            height: 2px;
-            background: #ffffff21;
-            position: absolute;
-            width: 50px;
-            left: -52px;
-            z-index: -11;
-            top: 35px;
+          &+.item{
+            margin-top: 40px;
+          }
+          &.active{
+            box-shadow: 0 0 10px rgba($dark,0.1);
+            border: none;
+            ul{
+              display: block;
+            }
+            .area-collapse{
+              transform: rotate(180deg);
+            }
           }
         }
         .company-name{
           display: flex;
-          .img-wrap{
-            position: absolute;
-            height: 60px;
-            width: 60px;
-            background-color: $white;
-            left: -90px;
-            top: 6px;
-            border-radius: 50%;
-          }
+          align-items: center;
         }
       }
     }
   }
 }
 
-.wudi{
-  background-image: url("../../assets/wudi.png");
-  background-position: 2px -3px;
-  background-size: cover;
-}
-.pf{
-  background-image: url("../../assets/pf.jpg");
-  background-size: cover;
-  background-position: center;
+@keyframes heightAnim{
+  0%{
+    transform:scaleY(0);
+    display: none;
+  }
+  100%{
+    transform:scaleY(1);
+    display: block;
+  }
 }

@@ -69,24 +69,21 @@ AOS.init({
 
 //TIMELINE
 
-// document.getElementById("workPlace").addEventListener("click", function (e) {
-//   e.preventDefault();
-//   if (e.target && e.target.matches("li *")) {
-//     let that = e.target.closest("li");
-//     if (!that.classList.contains("active")) {
-//       Array.from(that.parentNode.children).map((li) => {
-//         li.classList.remove("active");
-//       });
-//       that.classList.add("active");
-//       let workDet = document.getElementById("workDet");
-//       Array.from(workDet.children).map((c) => {
-//         c.classList.remove("show");
-//       });
-//       let wkTarget = that.getAttribute("data-com");
-//       document.getElementById(wkTarget).classList.add("show");
-//     }
-//   }
-// });
+document.getElementById("workDet").addEventListener("click", function (e) {
+  if (e.target && e.target.matches(".half *")) {
+    if (!(e.target instanceof HTMLAnchorElement)) {
+      let that = e.target.closest(".item");
+      if(that != null){
+        if(that.classList.contains("active")){
+          that.classList.remove("active");
+        }
+        else{
+          that.classList.add("active");
+        }
+      }
+    }
+  }
+});
 
 //SCROLL
 document.getElementById("navItems").addEventListener("click", (e) => {
