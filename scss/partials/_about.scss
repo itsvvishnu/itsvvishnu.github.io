@@ -41,6 +41,37 @@ section.about{
       }
     }
   }
+  .contents{
+    display: flex;
+    @media(max-width:576px){
+      flex-direction: column-reverse;
+      justify-content: center;
+    }
+    .content{
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+      @media(max-width:576px){
+        width: 100%;
+      }
+      img{
+        border-radius: 50%;
+        width: 200px;
+        margin-left: auto;
+        box-shadow: 0 0 10px #3e3e3e26;
+        @media(max-width:576px){
+          margin: 20px auto;
+          width: 150px;
+        }
+      }
+      +.content{
+        width: 30%;
+        @media(max-width:576px){
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 

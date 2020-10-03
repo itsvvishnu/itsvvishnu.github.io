@@ -3,13 +3,26 @@ section.work{
     margin-top: 50px;
     .item{
       display: flex;
+      @media(max-width:576px){
+        display: flex;
+        background: #fff;
+        border: 1px solid #f1f1f1;
+        border-radius: 4px;
+        padding:20px 0;
+      }
       h4{
         font-size: 30px;
         color: $dark;
         margin: 15px 0 10px 0;
+        @media(max-width:576px){
+          margin: 0;
+        }
       }
       .tech{
         display: flex;
+        @media(max-width:576px){
+          margin-top: 10px;
+        }
         span{
           color: $primary;
           font-family: "PT Sans Caption", sans-serif;
@@ -29,11 +42,27 @@ section.work{
         color: #fff;
         margin-top: 40px;
       }
+      .sec{
+        @media(max-width:576px){
+          margin-top: 20px;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+        }
+        img{
+          @media(max-width: 567px){
+            width: 80px;
+          }
+        }
+      }
     }
     .half{
       flex-direction: column;
       align-items: flex-start;
       width: auto;
+      @media(max-width: 576px){
+        align-items: center;
+      }
       img{
         width: 200px;
       }
