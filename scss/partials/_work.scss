@@ -16,6 +16,7 @@ section.work{
         margin: 15px 0 10px 0;
         @media(max-width:576px){
           margin: 0;
+          font-size: 20px;
         }
       }
       .tech{
@@ -29,6 +30,9 @@ section.work{
           border-radius: 34px;
           padding: 5px 10px;
           background-color: #0000000a;
+          @media(max-width:567px){
+            font-size: 14px;
+          }
           +span{
             margin-left: 10px;
           }
@@ -41,6 +45,9 @@ section.work{
         font-family: "PT Sans Caption", sans-serif;
         color: #fff;
         margin-top: 40px;
+        @media(max-width: 576px){
+          margin-top: 20px;
+        }
       }
       .sec{
         @media(max-width:576px){
@@ -52,6 +59,11 @@ section.work{
         img{
           @media(max-width: 567px){
             width: 80px;
+          }
+        }
+        p{
+          @media(max-width: 576px){
+            font-size: 16px;
           }
         }
       }

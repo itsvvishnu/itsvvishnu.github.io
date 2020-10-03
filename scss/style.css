@@ -354,6 +354,7 @@ section.work .projects .item h4 {
 @media (max-width: 576px) {
   section.work .projects .item h4 {
     margin: 0;
+    font-size: 20px;
   }
 }
 
@@ -377,6 +378,12 @@ section.work .projects .item .tech span {
   background-color: #0000000a;
 }
 
+@media (max-width: 567px) {
+  section.work .projects .item .tech span {
+    font-size: 14px;
+  }
+}
+
 section.work .projects .item .tech span + span {
   margin-left: 10px;
 }
@@ -388,6 +395,12 @@ section.work .projects .item .pr-action {
   font-family: "PT Sans Caption", sans-serif;
   color: #fff;
   margin-top: 40px;
+}
+
+@media (max-width: 576px) {
+  section.work .projects .item .pr-action {
+    margin-top: 20px;
+  }
 }
 
 @media (max-width: 576px) {
@@ -409,6 +422,12 @@ section.work .projects .item .pr-action {
 @media (max-width: 567px) {
   section.work .projects .item .sec img {
     width: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  section.work .projects .item .sec p {
+    font-size: 16px;
   }
 }
 
