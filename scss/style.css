@@ -572,6 +572,17 @@ section.hero {
   background-blend-mode: hard-light;
 }
 
+@media (max-width: 576px) {
+  section.hero .draw {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 section.hero .draw img {
   display: block;
   position: absolute;
@@ -580,14 +591,23 @@ section.hero .draw img {
   top: 138px;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 576px) {
   section.hero .draw img {
-    display: none;
+    width: 140px;
+    position: relative;
+    top: 0;
+    right: 0;
   }
 }
 
 section.hero .navbar {
   padding: 20px 0;
+}
+
+@media (max-width: 576px) {
+  section.hero .navbar {
+    padding: 10px 0;
+  }
 }
 
 section.hero .navbar.sticky {
@@ -658,6 +678,12 @@ section.hero .navbar nav .logo a svg {
   fill: #5d4fff;
 }
 
+@media (max-width: 576px) {
+  section.hero .navbar nav .logo a svg {
+    height: 20px;
+  }
+}
+
 @media (max-width: 768px) {
   section.hero .navbar .half.end .nav-links {
     display: none;
@@ -671,6 +697,16 @@ section.hero .navbar .half.end .menu {
 @media (max-width: 768px) {
   section.hero .navbar .half.end .menu {
     width: 50px;
+    display: block;
+  }
+  section.hero .navbar .half.end .menu svg {
+    fill: #091d29;
+  }
+}
+
+@media (max-width: 576px) {
+  section.hero .navbar .half.end .menu {
+    width: 35px;
     display: block;
   }
   section.hero .navbar .half.end .menu svg {
@@ -702,6 +738,12 @@ section.hero .intro {
   }
 }
 
+@media (max-width: 576px) {
+  section.hero .intro {
+    padding-top: 60px;
+  }
+}
+
 section.hero .intro h2 {
   font-size: 50px;
   margin: 25px 0 0 0;
@@ -711,12 +753,27 @@ section.hero .intro h2 {
   max-width: 600px;
 }
 
+@media (max-width: 567px) {
+  section.hero .intro h2 {
+    margin-top: 40px;
+    font-size: 23px;
+    line-height: 32px;
+    text-align: center;
+  }
+}
+
 section.hero .intro p {
   max-width: 700px;
   line-height: 30px;
   font-size: 18px;
   margin: 25px 0 0 0;
   color: #757575;
+}
+
+@media (max-width: 567px) {
+  section.hero .intro p {
+    text-align: center;
+  }
 }
 
 section.hero .intro a + a {
@@ -780,6 +837,14 @@ section.hero .intro a + a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media (max-width: 576px) {
+  .ctas {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 
 footer.sep {
