@@ -339,7 +339,7 @@ section.work .projects .item {
     display: -ms-flexbox;
     display: flex;
     background: #fff;
-    border: 1px solid #f1f1f1;
+    border: 1px solid #e0e4fe;
     border-radius: 4px;
     padding: 20px 0;
   }
