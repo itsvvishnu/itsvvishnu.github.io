@@ -10,6 +10,9 @@ a.get-in-touch {
   font-family: "PT Sans Caption", sans-serif;
   border-radius: 4px;
   transition: all ease-in-out 1s;
+  @media(max-width:576px){
+    margin: 25px auto 0 auto;
+  }
   &.fill{
     background-color: $secondary;
     color: $light;

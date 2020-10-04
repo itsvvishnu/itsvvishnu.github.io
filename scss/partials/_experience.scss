@@ -6,6 +6,9 @@ section.experience{
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  @media(max-width:576px){
+    padding: 40px 0;
+  }
   .work-place {
     display: flex;
     position: relative;
@@ -92,6 +95,9 @@ section.experience{
         font-family: "PT Sans Caption", sans-serif;
         color: $dark;
         opacity: 0.7;
+        @media(max-width:576px){
+          font-size: 14px;
+        }
       }
       ul{
         animation: heightAnim ease-in-out 0.5s;
@@ -107,6 +113,9 @@ section.experience{
           line-height: 30px;
           padding-left: 20px;
           color: $dark;
+          @media(max-width:576px){
+            font-size: 14px;
+          }
         }
       }
       .overlay-outer{
@@ -115,8 +124,8 @@ section.experience{
           flex-direction: column;
           position: relative;
           padding:20px;
-          border-radius: 5px;
-          box-shadow: 0 0 10px 1px #dcdcdc69;
+          border: 1px solid #e0e4fe;
+          border-radius: 4px;
           background-color: #fff;
           max-height: fit-content;
           transition:  all ease-in-out 1s;
@@ -124,11 +133,19 @@ section.experience{
             cursor: pointer;
             display: flex;
             transition: 300ms ease all;
+            svg{
+              @media(max-width:576px){
+                width: 18px;
+              }
+            }
           }
           h2{
             display: block;
             width: 100%;
             color: $dark;
+            @media(max-width:576px){
+              font-size: 16px;
+            }
             a{
               font-family: "Montserrat", sans-serif;
             }
@@ -142,7 +159,6 @@ section.experience{
           }
           &.active{
             box-shadow: 0 0 10px rgba($dark,0.1);
-            border: none;
             ul{
               display: block;
             }

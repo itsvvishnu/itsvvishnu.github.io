@@ -57,6 +57,13 @@ section.hero{
           color: $white;
         }
       }
+      .half.end{
+       .menu{
+          svg{
+            fill: #fafafa;
+          }
+        }
+      }
     }
     nav{
       height: 60px;
