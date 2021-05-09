@@ -1,0 +1,17 @@
+.container{
+    justify-content: space-between;
+    .split{
+        display: flex;
+        ul{
+            display: flex;
+            li{
+                a{
+                    color: white;
+                }
+                +li{
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+}
