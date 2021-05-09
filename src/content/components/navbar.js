@@ -13,10 +13,13 @@ export const  navbar = {
         "Contacto"
     ],
     fr:[
+        "",
+        "Vivre"
 
     ],
     pr:[
-
+        "Sala",
+        "Experiência"
     ]
 }
 

@@ -2,8 +2,9 @@
     <div class="nav">
         <nav class="container">
             <div class="split">
-                <div class="img-wrappper">
-                    <img :src="logo" alt="logo">
+                <div class="img-wrapper">
+                    <logo />
+                    <language-selector />
                 </div>
             </div>
             <div class="split">
@@ -21,14 +22,18 @@
 </template>
 
 <script>
-import logo from '@/assets/logo.svg'
+import logo from '@/svg/logo'
 import {navbar , routes} from '@/content/components/navbar.js'
 import {mapGetters} from "vuex"
+import LanguageSelector from '@/components/LanguageSelector'
 export default {
+  components: {
+		'language-selector':LanguageSelector,
+        logo
+	},
   name: 'NavBar',
   data(){
     return{
-        logo
     }
   },
   computed:{
@@ -45,11 +50,6 @@ export default {
 			return routes
 		}
   },
-  created(){
-      setTimeout(() => {
-        this.$store.dispatch('SWITCH_LANGUAGE','es')
-      }, 2000);
-  }
 }
 </script>
 
