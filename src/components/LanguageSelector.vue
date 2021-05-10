@@ -1,10 +1,10 @@
 <template>
-    <div class="wrapper">
-        <div class="icon" @click.prevent="() => dropdown = !dropdown" v-click-outside="()=> dropdown = false">
+    <div class="wrapper" v-click-outside="()=> dropdown = false">
+        <div class="icon" @click.prevent="() => dropdown = !dropdown">
             <switcher />
             <span>{{ currentLang }}</span>
         </div>
-        <div :class="['drop-down',{'active':dropdown}]" v-if="dropdown">
+        <div :class="['drop-down',{'active':dropdown}]">
             <ul>
                 <li
                     v-for="(lang,index) in langOptions"
