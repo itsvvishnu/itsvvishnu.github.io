@@ -1,0 +1,31 @@
+@import '@/style/vars.scss';
+$elements: 2700;
+.wrapper{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    height: 294px;
+    overflow: hidden;
+    .circle{
+        animation:fill 4s ease-in-out infinite alternate-reverse;
+        background-color: rgba($activeLink,0.07);
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        margin: 2px;
+        @for $i from 0 to $elements {
+            &:nth-child(#{$i + 1}) {
+                animation-delay: #{0.001*$i}s;
+            }
+        }
+    }
+}
+
+@keyframes fill{
+    0%{
+        background-color: rgba($activeLink,0.02);
+    }
+    100%{
+        background-color: rgba($activeLink,0.07);
+    }
+}

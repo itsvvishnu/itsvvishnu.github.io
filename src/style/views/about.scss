@@ -1,0 +1,81 @@
+@import '@/style/vars.scss';
+
+$offset:4%;
+$offsetBottom:(100 - $offset);
+$elements:10;
+.about{
+    margin-top: 40px;
+    clip-path: polygon(0 0, 100% $offset, 100% $offsetBottom, 0%  100%);
+    background-color: $secondary;
+    h2{
+        font-size: 28px;
+        color: $activeLink;
+    }
+    span{
+        font-size: 18px;
+        line-height: 32px;
+        color: $activeLink;
+    }
+    .split{
+        width: 60%;
+        padding-right: 20px;
+        &+.split{
+            padding-right: 0;
+            padding-left: 20px;
+            width: 40%;
+        }
+        .skill-wrap{
+            position: relative;
+            .icon-wrap{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                padding: 20px;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                .icon{
+                    width: 20%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    :deep svg{
+                        width: 60px;
+                    }
+                }
+                &.active{
+                    .icon{
+                        animation: wave 5s ease-in-out 1 forwards;
+                        opacity: 0;
+                        @for $i from 0 to $elements {
+                            &:nth-child(#{$i + 1}) {
+                                animation-delay: #{.6*$i}s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes wave {
+    0%{
+        opacity: 0;
+    }
+    0%, 60%, 100% {
+        transform: initial;
+    }
+
+    30% {
+        transform: translateY(-20px);
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}

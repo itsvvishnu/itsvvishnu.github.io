@@ -7,7 +7,7 @@ export const  navbar = {
 
     ],
     es:[
-        "Sala",
+        "Inicio",
         "Experiencia",
         "Trabajos",
         "Contacto"
